@@ -1,0 +1,1 @@
+Se está utilizando este código para poder replicar los pulsos binaurales, en la migración se usó el mismo código, pero se subió el archivo .wav generado desde la rasp.
