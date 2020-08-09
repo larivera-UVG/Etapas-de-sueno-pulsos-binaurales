@@ -10,7 +10,7 @@ import time
 """ 
 Función para Generar Pulsos Binaurales
 José Pablo Muñoz
-2019 
+2019 Utilizado por Luis Guerrero para pruebas en su Tesis
 """ 
 
 #------------------------------------------------------------------------------
