@@ -1,5 +1,7 @@
+clear all;
+
 %%  Establecer la longitud de las epocas que se desea e inicializacion de variables
-Epocas_Length = 30; % Duracion en segundos de cada epoca
+Epocas_Length = 5; % Duracion en segundos de cada epoca
 Canales = 8;        % Numero de canales que se desea usar (1 a 8)
 itr = 1;
 t=1:1000;
@@ -9,11 +11,12 @@ ctrl = 0;
 %%  Reservar memoria para vector de datos raw y para filtrar los datos
 Col = 8;
 Row = 50000000;
-Live_Data = zeros(Row,Col);
+Live_Data1 = zeros(Row,Col);
 Temp_Raw_Vector = zeros(Epocas_Length*100,8);
 Live_Data_test = [];
 Live_Data_test2 = [];
 Full_Fill_Vec = [];
+Proseced_Data = [];
 Feature_1 = [];
 Feature_2 = [];
 Feature_3 = [];
@@ -54,7 +57,7 @@ disp('Now receiving data...');
 % grid on;
 % hold on;
 
-while true
+while ctrl<=3
     
     
     [vec,ts] = inlet.pull_sample();
@@ -109,6 +112,7 @@ while true
             Conv_F4 = [Feature_4(1);Feature_4(2);Feature_4(3);Feature_4(4);Feature_4(5)];
             Conv_F5 = [Feature_5(1);Feature_5(2);Feature_5(3);Feature_5(4);Feature_5(5)];
            
+            
             
             Feature1_Vec = cat(1,Feature1_Vec,Conv_F1);
             Feature2_Vec = cat(1,Feature2_Vec,Conv_F2);

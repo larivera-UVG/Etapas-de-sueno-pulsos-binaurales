@@ -4,132 +4,65 @@ Created on Wed Jul  1 20:17:11 2020
 
 @author: kokal
 """
-import pandas as pd
-import csv
-import numpy as np
-import matplotlib.pyplot as plt
+import mysql.connector
+import shutil
+import os
+
+class DataBase:
+    def __init__(self):
+        self.connection = mysql.connector.connect(
+            host='localhost',
+            user='root',
+            password='',
+            db='uvg_eeg'
+        )
+        self.cursor = self.connection.cursor()
+        print("Conexion Exitosa")
+
+    def close(self):
+        self.connection.close()
+
+    def add_data(self):
+        sql = "INSERT INTO movement_eeg(Mov_ID,Mov_F1,Mov_F2,Mov_F3,Mov_F4,Mov_F5,Mov_Chnl_1_Fil,Mov_Descrip) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
+        Data = (ID,F1,F2,F3,F4,F5,Data_Filt,Descript)
+        self.cursor.execute(sql, Data)
+        self.connection.commit()
+
+database=DataBase()
+database.close()
+Opt = 0; #Ingresar 0 para guardar data y 1 para 'Descargarla'
+
+if Opt == 0:#Modo de carga de datos
+    Dir_Act =os.getcwd()    #Direcotrio actual del proyecto
+    Dir_Origin = 'C:\\Users\kokal\OneDrive\Documents\Primer Semetre 2020\Diseno e innovacion\Datos Pyshio\Python\Cerrando ojo izquierdo 5 rep'
+    DB_Dir = 'C:\\Users\kokal\OneDrive\Documents\Sleep_DataBase\ ' #Directorio Local en donde se almacenaran los datos
+
+    # Nombre de los archivos a subir
+    Feature1 = 'Feature_1.csv'
+    Feature2 = 'Feature_2.csv'
+    Feature3 = 'Feature_3.csv'
+    Feature4 = 'Feature_4.csv'
+    Feature5 = 'Feature_5.csv'
+    files = os.listdir(Dir_Origin)
 
 
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import firestore
+    # asignando variables para realizar la carga de datos
+    ID = '000001'
 
-cred = credentials.Certificate('sleepdbuvg_Key.json')
-firebase_admin.initialize_app(cred)
-
-dbs = firestore.client()
-
-data_path = 'Data_Pro.csv'
-data = pd.read_csv(data_path, header=0)
-# print(data)
-tst = data.to_numpy()
-MAV = tst[[0]]
-ZC = tst[[1]]
-MMD = tst[[2]]
-
-# print(str(MAV))
-# print(MAV_Str)
-
-
-data_path2 = 'Data_Raw.csv'
-data2 = pd.read_csv(data_path2, header=0)
-# print(data2)
-PreRaw = data2.to_numpy()
-Raw = PreRaw[[0]]
-
-# print(Raw)
-
-ID = 2020001
-Descpt = "Aqui se ingresan las condiciones de las mediciones"
-'''
-doc_ref = dbs.collection('Upload_Test').document('SleepEEG')
-doc_ref.set({
-    'ID': ID,
-    'MAV':str(MAV),
-    'ZC':str(ZC),
-    'MMD':str(MMD),
-    'Raw_Data':str(Raw)
-
-
-})
-'''
-
-# Get data
-Doc = dbs.collection('Upload_Test').where('ID', '==', ID).stream()
-for doc in Doc:
-    print(('{} => {} '.format(doc.id, doc.to_dict())))
-    Save_File = ('{} => {} '.format(doc.id, doc.to_dict()))
-
-# print(Doc)
-# print(type(Save_File))
-
-SF = list(Save_File.split(" "))
-    
-# print(type(Save_File))
-    
-V1 = []
-V2 = []
-V3 = []
-V4 = []
-
-for vec in range(len(SF) - 1, -1, -1):
-    if SF[vec] == "=>":
-        del SF[vec]
-    if SF[vec] == "SleepEEG":
-        del SF[vec]
-
-for vect in range(len(SF)- 1, -1, -1):
-    if SF[vect] == "{'MAV':":
-        Index1 = vect
-    else:
-        if SF[vect] == "'ID':":
-            Index2 = vect
-        else:
-            if SF[vect] == "'MMD':":
-                Index3 = vect
-            else:
-                if SF[vect] == "'ZC':":
-                    Index4 = vect
-                else:
-                    if SF[vect] == "'Raw_Data':":
-                        Index5 = vect
-
-# print(Index1)
-# print(Index2)
-# print(Index3)
-# print(Index4)
-# print(Index5)
-
-V1 = SF[Index1:Index2-1]
-V2 = SF[Index2:Index3]
-V3 = SF[Index3:Index4]
-V4 = SF[Index4:Index5]
-V5 = SF[Index5:]
-
-
-# print(SF)
-# print(V1)
-# print(V2)
-# print(V3)
-# print(V4)
-# print(V5)
-
-Feature_1 = pd.DataFrame({
-    V1[0]: V1[1:]
-})
-
-Feature_3 = pd.DataFrame({
-    V3[0]: V3[1:]
-})
-Feature_4 = pd.DataFrame({
-    V4[0]: V4[1:]
-})
-Raw_Datas = pd.DataFrame({
-    V5[0]: V5[1:]
-})
-# print(Feature_1)
-Feature_1.to_csv('Feature_1.csv')
-Feature_3.to_csv('Feature_2.csv')
-Feature_4.to_csv('Feature_3.csv')
-Raw_Datas.to_csv('Raw_Datas.csv')
-# '''
+    Data_Filt = '123,456,789'
+    Descript = 'Esta es una prueba de ingreso'
+    for file in files:
+        if os.path.isfile(file):
+            shutil.copy2(file, DB_Dir+ID)
+            
+    F1 = DB_Dir + Feature1
+    print(F1)
+    F2 = 1
+    F3 = 1
+    F4 = 1
+    F5 = 1
+    # database.add_data()
+else:
+    if Opt == 1:
+        #Modo de descarga de datos
+        print('Null')

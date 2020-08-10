@@ -1,0 +1,14 @@
+[
+{"type":"header","version":"5.0.2","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"uvg_eeg"},
+{"type":"table","name":"movement_eeg","database":"uvg_eeg","data":
+[
+{"Mov_ID":"000001","Mov_F1":"1","Mov_F2":"1","Mov_F3":"1","Mov_F4":"1","Mov_F5":"1","Mov_Chnl_1_Fil":"123,456,789","Mov_Descrip":"Esta es una prueba de ingreso"}
+]
+}
+,{"type":"table","name":"sleepdb","database":"uvg_eeg","data":
+[
+
+]
+}
+]
