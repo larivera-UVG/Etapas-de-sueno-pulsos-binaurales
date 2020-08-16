@@ -99,8 +99,7 @@ while ctrl<=50
         Feature_4 = [bandpower(Chn1),bandpower(Chn2),bandpower(Chn3),bandpower(Chn4),bandpower(Chn5),bandpower(Chn6),bandpower(Chn7),bandpower(Chn8)];
         Feature_5 = [kurtosis(Chn1),kurtosis(Chn2),kurtosis(Chn3),kurtosis(Chn4),kurtosis(Chn5),kurtosis(Chn6),kurtosis(Chn7),kurtosis(Chn8)];
         
-        % Cada caracteristica se almacena en vectores diferentes a medida
-        % que se extraen
+        % Cada caracteristica se almacena en 
         Feature1_Vec = cat(1,Feature1_Vec,Feature_1);
         Feature2_Vec = cat(1,Feature2_Vec,Feature_2);
         Feature3_Vec = cat(1,Feature3_Vec,Feature_3);
@@ -109,6 +108,11 @@ while ctrl<=50
         
         itr = 0;
         disp('Done');
-        ctrl = ctrl + 1; % variable de control de duracion de la simulacion 
+        ctrl = ctrl + 1;
+        
+    else
+        
+        itr = itr + 1;
+        
     end
 end
