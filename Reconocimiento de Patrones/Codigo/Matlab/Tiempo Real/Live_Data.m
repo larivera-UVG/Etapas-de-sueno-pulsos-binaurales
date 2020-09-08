@@ -62,7 +62,7 @@ mitimer  = tic;
 n = 1;
 
 
-while ctrl<=1500
+while true
     
     [vec,ts] = inlet.pull_sample();                         % Se realiza la lectura de los 8 canales 
     tiempos(n) = toc(mitimer);
@@ -73,6 +73,11 @@ while ctrl<=1500
     i=i+1;
     if(mod(i,Epocas_Length*250+1)==0)                       % Cada vez que pase cierta cantidad de tiempo se hace la separacion de epocas
         i=1;
+        if (min(Live_Data_test2)==0)
+             [M,I] = find(Live_Data_test2 == 0);
+             Live_Data_test2(M,I) = Offset;
+             fprintf('/');
+        end
         Fixed_Vector = Live_Data_test2 - (Offset);
 %         Fixed_Vector = Live_Data_test2 - Live_Data_test2(1,:);
         display_buff_filt = filter(b2,a2,Fixed_Vector);  % Se realiza el friltrado del los datos
