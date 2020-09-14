@@ -62,7 +62,7 @@ mitimer  = tic;
 n = 1;
 
 
-while ctrl<=2
+while true
     
     [vec,ts] = inlet.pull_sample();                         % Se realiza la lectura de los 8 canales 
     tiempos(n) = toc(mitimer);
@@ -73,10 +73,17 @@ while ctrl<=2
     i=i+1;
     if(mod(i,Epocas_Length*250+1)==0)                       % Cada vez que pase cierta cantidad de tiempo se hace la separacion de epocas
         i=1;
+        if (min(Live_Data_test2)==0)
+             [M,I] = find(Live_Data_test2 == 0);
+             Live_Data_test2(M,I) = Offset;
+             fprintf('/');
+        end
         Fixed_Vector = Live_Data_test2 - (Offset);
+%         Fixed_Vector = Live_Data_test2 - Live_Data_test2(1,:);
         display_buff_filt = filter(b2,a2,Fixed_Vector);  % Se realiza el friltrado del los datos
         display_buff_filt = filter(b,a,display_buff_filt);
         Offset = [mean(Live_Data_test2(:,1)),mean(Live_Data_test2(:,2)),mean(Live_Data_test2(:,3)),mean(Live_Data_test2(:,4)),mean(Live_Data_test2(:,5)),mean(Live_Data_test2(:,6)),mean(Live_Data_test2(:,7)),mean(Live_Data_test2(:,8))];
+%         Offseet = mean(Live_Data_test2,1);
         Full_Fill_Vec(cont:cont3 ,:) = Live_Data_test2;     % Se almacenan los datos de cada epoca de los valores en bruto
         Temp_Raw_Vector(cont:cont3,:) = display_buff_filt;  % Se almacenan los datos de cada epoca de los valores filtrados
         cont = cont + cont2;                                % Contador para la primera posicion de la proxima epoca a guardar
