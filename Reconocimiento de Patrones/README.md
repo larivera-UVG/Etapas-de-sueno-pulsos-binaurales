@@ -2,8 +2,8 @@
 ## Descripcion 
 Esta sección trata acerca del reconocimiento de patrones para la detección de las diferentes etapas del sueño, para esto se emplearon distintos algoritmos en distintos lenguajes de programación para poder cumplir este objetivo. También se busca lograr ir generando una colección de datos para poder realizar distintas pruebas en el futuro por lo que se utilizó MYSQL para generar una base de datos y con ayuda de Python poder ir ingresando cada una de las distintas mediciones que se fueran realizando y poder documentar cada una de ellas.
 
-## MATLAB 
-### Que es Mat Lab?
+### MATLAB 
+#### Que es Mat Lab?
 
 MATLAB es el nombre abreviado de “MATrix LABoratory”. MATLAB es un programa para realizar cálculos numéricos con vectores y matrices. Como caso particular puede también trabajar con números escalares tanto reales como complejos, con cadenas de caracteres y con otras estructuras de información más  complejas. Una de las capacidades más atractivas es la de realizar una amplia variedad de gráficos en dos y tres dimensiones. MATLAB tiene también un lenguaje de programación propio. 
 
@@ -11,7 +11,7 @@ MATLAB es el nombre abreviado de “MATrix LABoratory”. MATLAB es un programa 
 
 Matlab es una herramienta interactiva basada en matrices para cálculos científicos y de ingeniería. Desde el punto de vista del control, matlab se puede considerar un entorno matemático de simulación que puede utilizarse para modelar y analizar sistemas. Permitir a el estudio de sistemas continuos, discretos, lineales y no lineales, mediante descripción interna y externa, en el dominio temporal y frecuencia. Matlab constituye un entorno abierto, para el cual numerosas paquetes específicos adicionales (toolboxes) han sido desarrollados.
 
-## Python
+### Python
 Python es un lenguaje de scripting independiente de plataforma y orientado a objetos, preparado para realizar cualquier tipo de programa, desde aplicaciones Windows a servidores de red o incluso, páginas web. Es un lenguaje interpretado, lo que significa que no se necesita compilar el código fuente para poder ejecutarlo, lo que ofrece ventajas como la rapidez de desarrollo e inconvenientes como una menor velocidad.
 
 En los últimos años el lenguaje se ha hecho muy popular, gracias a varias razones como:
@@ -20,8 +20,8 @@ En los últimos años el lenguaje se ha hecho muy popular, gracias a varias razo
 - La cantidad de plataformas en las que podemos desarrollar, como Unix, Windows, OS/2, Mac, Amiga y otros.
 - Además, Python es gratuito, incluso para propósitos empresariales.
 
-## MYSQL
-### ¿Qué es el programa MySQL?
+### MYSQL
+#### ¿Qué es el programa MySQL?
 MySQL es un sistema de gestión de bases de datos que cuenta con una doble licencia. Por una parte es de código abierto, pero por otra, cuenta con una versión comercial gestionada por la compañía Oracle. Actualmente, es la base de datos de código abierto más famosa y utilizada en el mundo entero.
 Como él, podemos encontrar otras como la propia Oracle o Microsoft SQL Server. Todas tienen la misma finalidad y se utilizan en el mismo entorno, que no es más que el desarrollo web, y son las que más se utilizan actualmente para dar forma y facilitar la comunicación entre webs y servidores.
 
