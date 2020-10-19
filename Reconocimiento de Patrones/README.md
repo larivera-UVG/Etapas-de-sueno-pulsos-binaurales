@@ -21,3 +21,10 @@ En los últimos años el lenguaje se ha hecho muy popular, gracias a varias razo
 - Además, Python es gratuito, incluso para propósitos empresariales.
 
 ## MYSQL
+### ¿Qué es el programa MySQL?
+MySQL es un sistema de gestión de bases de datos que cuenta con una doble licencia. Por una parte es de código abierto, pero por otra, cuenta con una versión comercial gestionada por la compañía Oracle. Actualmente, es la base de datos de código abierto más famosa y utilizada en el mundo entero.
+Como él, podemos encontrar otras como la propia Oracle o Microsoft SQL Server. Todas tienen la misma finalidad y se utilizan en el mismo entorno, que no es más que el desarrollo web, y son las que más se utilizan actualmente para dar forma y facilitar la comunicación entre webs y servidores.
+
+Una de las principales características de MySQL es que trabaja con bases de datos relacionales, es decir, utiliza tablas múltiples que se interconectan entre sí para almacenar la información y organizarla correctamente. A pesar de su finalidad y del entorno en el que se utiliza, cabe destacar que es un sistema desarrollado originalmente en C y C++, uno de los lenguajes de programación más tradicionales y antiguos que existen.
+
+Con actualizaciones constantes y el gran punto a favor de ser un entorno gratuito y perfectamente modificable, MySQL se ha ganado la posición como uno de los más usados en el sector digital. La inmensa mayoría de programadores que trabajan en desarrollo web han pasado por el uso de esta herramienta por sus capacidades y sus bondades.
