@@ -13,6 +13,6 @@ Esta sección trata acerca del reconocimiento de patrones para la detección de 
     - [Matlab](https://github.com/larivera-UVG/Etapas-de-sueno-pulsos-binaurales/tree/master/Reconocimiento%20de%20Patrones/Codigo/Matlab)
       - [Offline](https://github.com/larivera-UVG/Etapas-de-sueno-pulsos-binaurales/tree/master/Reconocimiento%20de%20Patrones/Codigo/Matlab/Offline)
       - [Tiempo Real](https://github.com/larivera-UVG/Etapas-de-sueno-pulsos-binaurales/tree/master/Reconocimiento%20de%20Patrones/Codigo/Matlab/Tiempo%20Real)
-  - [Python](https://github.com/larivera-UVG/Etapas-de-sueno-pulsos-binaurales/tree/master/Reconocimiento%20de%20Patrones/Codigo/Python)
+    - [Python](https://github.com/larivera-UVG/Etapas-de-sueno-pulsos-binaurales/tree/master/Reconocimiento%20de%20Patrones/Codigo/Python)
       - [Base de Datos](https://github.com/larivera-UVG/Etapas-de-sueno-pulsos-binaurales/tree/master/Reconocimiento%20de%20Patrones/Codigo/Python/Base%20de%20datos)
       - [Conexion a Matlab](https://github.com/larivera-UVG/Etapas-de-sueno-pulsos-binaurales/tree/master/Reconocimiento%20de%20Patrones/Codigo/Python/Live_Data)
