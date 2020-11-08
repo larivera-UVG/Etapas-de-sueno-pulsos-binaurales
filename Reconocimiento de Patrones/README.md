@@ -8,4 +8,4 @@ Esta sección trata acerca del reconocimiento de patrones para la detección de 
 - MYSQL
 
 ## Contenido del Proyecto
-[Documentacion](#mi-titulo-a-anclar)
+[Documentacion](https://github.com/larivera-UVG/Etapas-de-sueno-pulsos-binaurales/tree/master/Reconocimiento%20de%20Patrones/Documentacion)
