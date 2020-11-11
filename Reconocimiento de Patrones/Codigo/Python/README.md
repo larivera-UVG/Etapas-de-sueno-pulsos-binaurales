@@ -21,5 +21,7 @@ Para este codigo se utilizan las liberias:
 - pylsl
 - argparse
 - atexit
+- pyserial
 
 ### Utilizacion
+Para poder ejecturar el programa es necesario ejecutarlo mediante la consola utilizando el siguiente comando "python openbci_matlab.py -p "PORT"" colocando el puerto COM correspondiente al que se este utilizando en el equipo. 
