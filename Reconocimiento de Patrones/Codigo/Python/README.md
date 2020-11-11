@@ -7,3 +7,9 @@ Este archivo se encarga de realizar la conexion entre python y la base de datos 
 Para este codigo se utilizan las liberias:
 - mysql.connector
 - shutil 
+Para saber como instalarlas se puede utilizar el comando "pip install <nombre de la libreria>" en la consola de comandos o referirirse a la siguiente paguina como referencia:https://docs.python.org/es/3/installing/index.html
+
+### Utilizacion 
+Para poder utilizar este programa solo es necesario abrirlo y variar los campos marcados dentro del codigo con los parametros para el usuario que lo desee utilizar y los archivos que desee almacenar.
+
+## Envio de datos a MATLAB
