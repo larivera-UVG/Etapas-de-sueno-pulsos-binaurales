@@ -14,3 +14,12 @@ Para saber como instalarlas se puede utilizar el comando "pip install + nombre d
 Para poder utilizar este programa solo es necesario abrirlo y variar los campos marcados dentro del codigo con los parametros para el usuario que lo desee utilizar y los archivos que desee almacenar.
 
 ## Envio de datos a MATLAB
+### Descripcion
+Este programa realiza la conexion entre Python y MATLAB para enviar los datos obtenidos por el Electro - Cap para luego ser procesados y analizados posteriormente. 
+### Librerias utilizadas
+Para este codigo se utilizan las liberias:
+- pylsl
+- argparse
+- atexit
+
+### Utilizacion
