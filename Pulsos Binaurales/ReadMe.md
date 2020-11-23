@@ -13,7 +13,7 @@ Diseñar e implementar un generador de pulsos binaurales compacto y de bajo cost
 ## Links
 Los siguientes Links dirigen a los distintos folders de este repositorio:
 - [Archivos de Sonido generados](https://github.com/larivera-UVG/Etapas-de-sueno-pulsos-binaurales/tree/master/Pulsos%20Binaurales/Archivos%20de%20sonido%20generados)
--
--
--
+- [Codigo](https://github.com/larivera-UVG/Etapas-de-sueno-pulsos-binaurales/tree/master/Pulsos%20Binaurales/Codigo)
+- [Documentos](https://github.com/larivera-UVG/Etapas-de-sueno-pulsos-binaurales/tree/master/Pulsos%20Binaurales/Documentos)
+- [Versiones de tesis](https://github.com/larivera-UVG/Etapas-de-sueno-pulsos-binaurales/tree/master/Pulsos%20Binaurales/Versiones%20de%20Tesis)
 
