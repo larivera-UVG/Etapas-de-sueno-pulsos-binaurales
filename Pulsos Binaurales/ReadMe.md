@@ -12,7 +12,7 @@ Diseñar e implementar un generador de pulsos binaurales compacto y de bajo cost
 - Diseñar un protocolo para la aplicación de los pulsos binaurales de forma segura, ypara la evaluación del impacto de los pulsos en la calidad del sueño de las personas.
 ## Links
 Los siguientes Links dirigen a los distintos folders de este repositorio:
--
+- [Archivos de Sonido generados](https://github.com/larivera-UVG/Etapas-de-sueno-pulsos-binaurales/tree/master/Pulsos%20Binaurales/Archivos%20de%20sonido%20generados)
 -
 -
 -
